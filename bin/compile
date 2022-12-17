@@ -33,11 +33,11 @@ header "Package information: ${PACKAGE_NAME} - ${PACKAGE_PATH}"
 
 cd "${BUILD_DIR}"
 
-header "Installing dependencies (lerna bootstrap)"
-lerna bootstrap --scope="${PACKAGE_NAME}" --include-dependencies 2>&1 | output
+# header "Installing dependencies (lerna bootstrap)"
+# lerna bootstrap --scope="${PACKAGE_NAME}" --include-dependencies 2>&1 | output
 
 header "Building ${PACKAGE_NAME} and its dependencies"
-lerna run build --scope="${PACKAGE_NAME}" --include-dependencies --stream 2>&1 | output
+lerna run build --stream 2>&1 | output
 
 cd -
 
