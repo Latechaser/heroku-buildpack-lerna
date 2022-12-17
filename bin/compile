@@ -46,4 +46,6 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
+tree -L 6 /app 
+
 echo "Copied ${PACKAGE_PATH} to root of app successfully" | indent
